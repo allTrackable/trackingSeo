@@ -1,0 +1,35 @@
+{
+  "source": [
+    {
+      "url": "https://www.afaforsakring.se/",
+      "id": "homepage"
+    },
+    {
+      "url": "https://www.afaforsakring.se/forsakring",
+      "id": "forsakring"
+    },
+    {
+      "url": "https://www.afaforsakring.se/ohalsa-och-arbetsskador",
+      "id": "ohalsa-och-arbetsskador"
+    },
+    {
+      "url": "https://www.afaforsakring.se/kundtjanst",
+      "id": "kundtjanst"
+    },
+    {
+      "url": "https://www.afaforsakring.se/om-oss",
+      "id": "om-oss"
+    }
+  ],
+  "projectId": "afa-lighthouse-performance",
+  "pubsubTopicId": "afa_launch_lighthouse",
+  "datasetId": "afa_desktop_lighthouse",
+  "minTimeBetweenTriggers": 300000,
+  "gcs": {
+    "bucketName": "afa_seo_performance_lighthouse"
+  },
+  "lighthouseFlags": {
+    "output": ["json"],
+    "emulatedFormFactor": "desktop"
+  }
+}

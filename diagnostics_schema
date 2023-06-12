@@ -1,0 +1,1079 @@
+[
+    {
+        "name": "fetch_time",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "site_url",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "site_id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    },
+    {
+        "name": "settings",
+        "type": "RECORD",
+        "mode": "NULLABLE",
+        "fields": [
+            {
+                "name": "output",
+                "type": "STRING",
+                "mode": "REPEATED"
+            },
+            {
+                "name": "maxWaitForFcp",
+                "type": "INTEGER",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "maxWaitForLoad",
+                "type": "INTEGER",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "throttlingMethod",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "throttling",
+                "type": "RECORD",
+                "mode": "NULLABLE",
+                "fields": [
+                    {
+                        "name": "rttMs",
+                        "type": "INTEGER",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "throughputKbps",
+                        "type": "FLOAT",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "requestLatencyMs",
+                        "type": "FLOAT",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "downloadThroughputKbps",
+                        "type": "FLOAT",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "uploadThroughputKbps",
+                        "type": "INTEGER",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "cpuSlowdownMultiplier",
+                        "type": "INTEGER",
+                        "mode": "NULLABLE"
+                    }
+                ]
+            },
+            {
+                "name": "auditMode",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "gatherMode",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "disableStorageReset",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "disableDeviceEmulation",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "emulatedFormFactor",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "channel",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "locale",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "blockedUrlPatterns",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "additionalTraceCategories",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "extraHeaders",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "precomputedLanternData",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "onlyAudits",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "onlyCategories",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "skipAudits",
+                "type": "STRING",
+                "mode": "NULLABLE"
+            }
+        ]
+    },
+    {
+        "name": "accessibility",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields": [
+            {
+                "name": "total_score",
+                "type": "FLOAT",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "bypass_repetitive_content",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "color_contrast",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "document_title_found",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "no_duplicate_id_attribute",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "html_has_lang_attribute",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "html_lang_is_valid",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "images_have_alt_attribute",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            }
+        ]
+    },
+    {
+        "name": "best_practices",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields": [
+            {
+                "name": "total_score",
+                "type": "FLOAT",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "uses_https",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "uses_http2",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "uses_passive_event_listeners",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "no_document_write",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "external_anchors_use_rel_noopener",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "no_geolocation_on_start",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "doctype_defined",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "no_vulnerable_libraries",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "notification_asked_on_start",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "avoid_deprecated_apis",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "allow_paste_to_password_field",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "errors_in_console",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "images_have_correct_aspect_ratio",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            }
+        ]
+    },
+    {
+        "name": "performance",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields": [
+            {
+                "name": "total_score",
+                "type": "FLOAT",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "first_contentful_paint",
+                "type": "RECORD",
+                "mode": "REPEATED",
+                "fields": [
+                    {
+                        "name": "raw_value",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "score",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    }
+                ]
+            },
+            {
+                "name": "first_meaningful_paint",
+                "type": "RECORD",
+                "mode": "REPEATED",
+                "fields": [
+                    {
+                        "name": "raw_value",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "score",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    }
+                ]
+            },
+            {
+                "name": "speed_index",
+                "type": "RECORD",
+                "mode": "REPEATED",
+                "fields": [
+                    {
+                        "name": "raw_value",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "score",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    }
+                ]
+            },
+            {
+                "name": "interactive",
+                "type": "RECORD",
+                "mode": "REPEATED",
+                "fields": [
+                    {
+                        "name": "raw_value",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "score",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    }
+                ]
+            },
+            {
+                "name": "first_cpu_idle",
+                "type": "RECORD",
+                "mode": "REPEATED",
+                "fields": [
+                    {
+                        "name": "raw_value",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "score",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "pwa",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields": [
+            {
+                "name": "total_score",
+                "type": "FLOAT",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "load_fast_enough",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "works_offline",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "installable_manifest",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "uses_https",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "redirects_http_to_https",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "has_meta_viewport",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "uses_service_worker",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "works_without_javascript",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "splash_screen_found",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            }
+        ]
+    },
+    {
+        "name": "seo",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields": [
+            {
+                "name": "total_score",
+                "type": "FLOAT",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "has_meta_viewport",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "document_title_found",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "meta_description",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "http_status_code",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "descriptive_link_text",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "is_crawlable",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "robots_txt_valid",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "hreflang_valid",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "font_size_ok",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            },
+            {
+                "name": "plugins_ok",
+                "type": "BOOLEAN",
+                "mode": "NULLABLE"
+            }
+        ]
+    },
+    {
+        "name": "opportunities",
+        "type": "RECORD",
+        "mode": "NULLABLE",
+        "fields": [
+            {
+                "name": "time_to_first_byte",
+                "type": "RECORD",
+                "mode": "REPEATED",
+                "fields": [
+                    {
+                        "name": "title",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "description",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "score",
+                        "type": "INTEGER",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "displayValue",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    }
+                ]
+            },
+            {
+                "name": "redirects",
+                "type": "RECORD",
+                "mode": "REPEATED",
+                "fields": [
+                    {
+                        "name": "title",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "description",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "score",
+                        "type": "INTEGER",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "displayValue",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    }
+                ]
+            },
+            {
+                "name": "uses_rel_preload",
+                "type": "RECORD",
+                "mode": "REPEATED",
+                "fields": [
+                    {
+                        "name": "title",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "description",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "score",
+                        "type": "INTEGER",
+                        "mode": "NULLABLE"
+                    }
+                ]
+            },
+            {
+                "name": "uses_rel_preconnect",
+                "type": "RECORD",
+                "mode": "REPEATED",
+                "fields": [
+                    {
+                        "name": "title",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "description",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "score",
+                        "type": "INTEGER",
+                        "mode": "NULLABLE"
+                    }
+                ]
+            },
+            {
+                "name": "offscreen_images",
+                "type": "RECORD",
+                "mode": "REPEATED",
+                "fields": [
+                    {
+                        "name": "title",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "description",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "score",
+                        "type": "INTEGER",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "displayValue",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    }
+                ]
+            },
+            {
+                "name": "render_blocking_resources",
+                "type": "RECORD",
+                "mode": "REPEATED",
+                "fields": [
+                    {
+                        "name": "title",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "description",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "score",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "raw_Value",
+                        "type": "INTEGER",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "displayValue",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    }
+                ]
+            },
+            {
+                "name": "unminified_css",
+                "type": "RECORD",
+                "mode": "REPEATED",
+                "fields": [
+                    {
+                        "name": "title",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "description",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "score",
+                        "type": "INTEGER",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "raw_Value",
+                        "type": "INTEGER",
+                        "mode": "NULLABLE"
+                    }
+                ]
+            },
+            {
+                "name": "unminified_javascript",
+                "type": "RECORD",
+                "mode": "REPEATED",
+                "fields": [
+                    {
+                        "name": "title",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "description",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "score",
+                        "type": "INTEGER",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "raw_Value",
+                        "type": "INTEGER",
+                        "mode": "NULLABLE"
+                    }
+                ]
+            },
+            {
+                "name": "unused_css_rules",
+                "type": "RECORD",
+                "mode": "REPEATED",
+                "fields": [
+                    {
+                        "name": "title",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "description",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "score",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "displayValue",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    }
+                ]
+            },
+            {
+                "name": "uses_webp_images",
+                "type": "RECORD",
+                "mode": "REPEATED",
+                "fields": [
+                    {
+                        "name": "title",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "description",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "score",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "displayValue",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    }
+                ]
+            },
+            {
+                "name": "uses_optimized_images",
+                "type": "RECORD",
+                "mode": "REPEATED",
+                "fields": [
+                    {
+                        "name": "title",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "description",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "score",
+                        "type": "INTEGER",
+                        "mode": "NULLABLE"
+                    }
+                ]
+            },
+            {
+                "name": "uses_responsive_images",
+                "type": "RECORD",
+                "mode": "REPEATED",
+                "fields": [
+                    {
+                        "name": "title",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "description",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "score",
+                        "type": "INTEGER",
+                        "mode": "NULLABLE"
+                    }
+                ]
+            },
+            {
+                "name": "uses_text_compression",
+                "type": "RECORD",
+                "mode": "REPEATED",
+                "fields": [
+                    {
+                        "name": "title",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "description",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "score",
+                        "type": "INTEGER",
+                        "mode": "NULLABLE"
+                    }
+                ]
+            },
+            {
+                "name": "efficient_animated_content",
+                "type": "RECORD",
+                "mode": "REPEATED",
+                "fields": [
+                    {
+                        "name": "title",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "description",
+                        "type": "STRING",
+                        "mode": "NULLABLE"
+                    },
+                    {
+                        "name": "score",
+                        "type": "INTEGER",
+                        "mode": "NULLABLE"
+                    }
+                ]
+            },
+            {
+                "name": "diagnostics",
+                "type": "RECORD",
+                "mode": "NULLABLE",
+                "fields": [
+                    {
+                        "name": "total_byte_weight",
+                        "type": "RECORD",
+                        "mode": "REPEATED",
+                        "fields": [
+                            {
+                                "name": "title",
+                                "type": "STRING",
+                                "mode": "NULLABLE"
+                            },
+                            {
+                                "name": "description",
+                                "type": "STRING",
+                                "mode": "NULLABLE"
+                            },
+                            {
+                                "name": "score",
+                                "type": "INTEGER",
+                                "mode": "NULLABLE"
+                            },
+                            {
+                                "name": "displayValue",
+                                "type": "STRING",
+                                "mode": "NULLABLE"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "uses_long_cache_ttl",
+                        "type": "RECORD",
+                        "mode": "REPEATED",
+                        "fields": [
+                            {
+                                "name": "title",
+                                "type": "STRING",
+                                "mode": "NULLABLE"
+                            },
+                            {
+                                "name": "description",
+                                "type": "STRING",
+                                "mode": "NULLABLE"
+                            },
+                            {
+                                "name": "score",
+                                "type": "INTEGER",
+                                "mode": "NULLABLE"
+                            },
+                            {
+                                "name": "displayValue",
+                                "type": "STRING",
+                                "mode": "NULLABLE"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "dom_size",
+                        "type": "RECORD",
+                        "mode": "REPEATED",
+                        "fields": [
+                            {
+                                "name": "title",
+                                "type": "STRING",
+                                "mode": "NULLABLE"
+                            },
+                            {
+                                "name": "description",
+                                "type": "STRING",
+                                "mode": "NULLABLE"
+                            },
+                            {
+                                "name": "score",
+                                "type": "INTEGER",
+                                "mode": "NULLABLE"
+                            },
+                            {
+                                "name": "displayValue",
+                                "type": "STRING",
+                                "mode": "NULLABLE"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "critical_request_chains",
+                        "type": "RECORD",
+                        "mode": "REPEATED",
+                        "fields": [
+                            {
+                                "name": "title",
+                                "type": "STRING",
+                                "mode": "NULLABLE"
+                            },
+                            {
+                                "name": "description",
+                                "type": "STRING",
+                                "mode": "NULLABLE"
+                            },
+                            {
+                                "name": "score",
+                                "type": "STRING",
+                                "mode": "NULLABLE"
+                            },
+                            {
+                                "name": "displayValue",
+                                "type": "STRING",
+                                "mode": "NULLABLE"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "user_timings",
+                        "type": "RECORD",
+                        "mode": "REPEATED",
+                        "fields": [
+                            {
+                                "name": "title",
+                                "type": "STRING",
+                                "mode": "NULLABLE"
+                            },
+                            {
+                                "name": "description",
+                                "type": "STRING",
+                                "mode": "NULLABLE"
+                            },
+                            {
+                                "name": "score",
+                                "type": "STRING",
+                                "mode": "NULLABLE"
+                            },
+                            {
+                                "name": "displayValue",
+                                "type": "STRING",
+                                "mode": "NULLABLE"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "bootup_time",
+                        "type": "RECORD",
+                        "mode": "REPEATED",
+                        "fields": [
+                            {
+                                "name": "title",
+                                "type": "STRING",
+                                "mode": "NULLABLE"
+                            },
+                            {
+                                "name": "description",
+                                "type": "STRING",
+                                "mode": "NULLABLE"
+                            },
+                            {
+                                "name": "score",
+                                "type": "STRING",
+                                "mode": "NULLABLE"
+                            },
+                            {
+                                "name": "displayValue",
+                                "type": "STRING",
+                                "mode": "NULLABLE"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "mainthread_work_breakdown",
+                        "type": "RECORD",
+                        "mode": "REPEATED",
+                        "fields": [
+                            {
+                                "name": "title",
+                                "type": "STRING",
+                                "mode": "NULLABLE"
+                            },
+                            {
+                                "name": "description",
+                                "type": "STRING",
+                                "mode": "NULLABLE"
+                            },
+                            {
+                                "name": "score",
+                                "type": "STRING",
+                                "mode": "NULLABLE"
+                            },
+                            {
+                                "name": "displayValue",
+                                "type": "STRING",
+                                "mode": "NULLABLE"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "font_display",
+                        "type": "RECORD",
+                        "mode": "REPEATED",
+                        "fields": [
+                            {
+                                "name": "title",
+                                "type": "STRING",
+                                "mode": "NULLABLE"
+                            },
+                            {
+                                "name": "description",
+                                "type": "STRING",
+                                "mode": "NULLABLE"
+                            },
+                            {
+                                "name": "score",
+                                "type": "STRING",
+                                "mode": "NULLABLE"
+                            },
+                            {
+                                "name": "rawValue",
+                                "type": "BOOLEAN",
+                                "mode": "NULLABLE"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "job_id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+    }
+]
